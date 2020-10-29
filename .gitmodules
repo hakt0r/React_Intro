@@ -1,0 +1,6 @@
+[submodule "Exercises/01-Project-Hamster"]
+	path = Exercises/01-Project-Hamster
+	url = https://github.com/hakt0r/React-Ex01
+[submodule "08-Complete-Todo"]
+	path = 08-Complete-Todo
+	url = https://github.com/hakt0r/Todis-SinglePageApp

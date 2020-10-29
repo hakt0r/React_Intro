@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul id="navbar" class="menu">
+
+        <li><a href="/">Home</a></li>
+
+        <li id="navmenu1">
+            <a href="#" class="close-menu"></a>
+            <a href="#navmenu1">Menu</a>
+            <ul class="sub menu">
+                <li><a href="/sub1">Tech Blog</a></li>
+                <li><a href="/sub2">Sub2</a></li>
+                <li><a href="/sub3">Sub3</a></li>
+            </ul>
+        </li>
+
+        <li><a href="/impressum">Impressum</a></li>
+
+    </ul>
+
+
+<style>
+        body { background: green; }
+        * {
+            color: black;
+            font-family: monospace;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+
+
+
+
+
+
+        
+
+        ul.menu {
+            z-index: 1;
+            padding: 0;
+            display: flex;
+            list-style: none;
+            line-height: 1.5em;
+            height: 1.5em;
+            box-sizing: border-box;
+        }
+
+        ul.menu li {
+            position: relative;
+            margin: 10px;
+            width: max-content;
+            height: max-content;
+        }
+        
+        ul.sub.menu li {
+            margin: 0px;
+        }
+
+        ul.sub.menu, .close-menu {
+            display: none;
+        }
+
+
+        ul.menu li:hover .menu.sub,
+        ul.menu li:target .menu.sub,
+        .menu.sub:hover
+        {
+            display: block;
+            position: absolute;
+            height: auto;
+            background-color: darkgreen;
+            top: 1.5em;
+        }
+
+        li:target .close-menu {
+            display: block;
+            z-index: 0;
+            position: fixed;
+            width: 200vw;
+            height: 200vh;
+            top: -100vh;
+            left: -100vw;
+        }
+
+
+
+
+
+        ul.menu a {
+            text-decoration: none;
+            font-size: 120%;
+            font-weight: bolder;
+        }
+    </style>
+</body>
+</html>
