@@ -10,6 +10,9 @@
 [submodule "Exercises/03-Map-Lists"]
 	path = Exercises/03-Map-Lists
 	url = https://github.com/hakt0r/React-Ex03
+[submodule "Exercises/04-Deep-State"]
+	path = Exercises/04-Deep-State
+	url = https://github.com/hakt0r/React-Ex04
 [submodule "09-Todis-Refactor"]
 	path = 09-Todis-Refactor
 	url = https://github.com/hakt0r/Todis-SinglePageApp
