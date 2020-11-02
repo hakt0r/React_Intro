@@ -1,5 +1,6 @@
 
 const cp = require('child_process');
+const fs = require('fs');
 
 function splitVideo (filename) {
     // `ffmpeg -i ${} -ss ${} -t ${} -c copy ${}.p${}.mp4`
@@ -27,4 +28,16 @@ switch ( command ){
             '-t',seconds,'-c','copy',`${name}.p${i.toString().padStart(2,'0')}.mp4`],{stdio:'inherit'})
         }
         break;
+    case 'push':
+        process.chdir('./Video');
+        // cp.execSync('for i in $(ls *.mp4); do MP4Box -isma -inter 500 $i; done');
+        const list = fs.readdirSync('.').filter( f => f.match('.mp4') );
+        const html = `<html>
+        ${list.map(
+            file => `<li/><a href="${file}">${file}</a>`
+        ).join('\n')}
+        </html>`;
+        fs.writeFileSync('index.html',html);
+        cp.spawn('rsync',['-avz','.','root@sz.hktr.de:/var/www/lfs/dci/fbw14/'],{stdio:'inherit'})
+        
 }
