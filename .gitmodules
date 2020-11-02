@@ -5,7 +5,7 @@
 	path = 08-Complete-Todo
 	url = https://github.com/hakt0r/Todis-SinglePageApp
 [submodule "09-Todis-Refactor"]
-	path = 11-Todis-Context
+	path = 09-Todis-Refactor
 	url = https://github.com/hakt0r/Todis-SinglePageApp
 [submodule "11-Todis-Context"]
 	path = 11-Todis-Context
