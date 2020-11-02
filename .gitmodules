@@ -4,6 +4,12 @@
 [submodule "08-Complete-Todo"]
 	path = 08-Complete-Todo
 	url = https://github.com/hakt0r/Todis-SinglePageApp
+[submodule "Exercises/02-Forms"]
+	path = Exercises/02-Forms
+	url = https://github.com/hakt0r/React-Ex02
+[submodule "Exercises/03-Map-Lists"]
+	path = Exercises/03-Map-Lists
+	url = https://github.com/hakt0r/React-Ex03
 [submodule "09-Todis-Refactor"]
 	path = 09-Todis-Refactor
 	url = https://github.com/hakt0r/Todis-SinglePageApp
