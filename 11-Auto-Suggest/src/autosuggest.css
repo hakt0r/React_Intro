@@ -1,0 +1,17 @@
+
+.input-group {
+    position: relative;
+}
+
+.input-group ul {
+    display: block;
+    position: absolute;
+    top:100%;
+    background: var(--background);
+    height: 50vh;
+    overflow-y: auto;
+}
+
+.input-group ul li {
+    display: block;
+}
