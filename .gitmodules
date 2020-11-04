@@ -19,3 +19,6 @@
 [submodule "11-Todis-Context"]
 	path = 11-Todis-Context
 	url = https://github.com/hakt0r/Todis-SinglePageApp
+[submodule "12-Todis-Reduced"]
+	path = 12-Todis-Reduced
+	url = https://github.com/hakt0r/Todis-SinglePageApp
