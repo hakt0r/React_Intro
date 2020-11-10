@@ -22,3 +22,6 @@
 [submodule "12-Todis-Reduced"]
 	path = 12-Todis-Reduced
 	url = https://github.com/hakt0r/Todis-SinglePageApp
+[submodule "13-Redux-Intro"]
+	path = 13-Redux-Intro
+	url = https://github.com/hakt0r/Calc14.git

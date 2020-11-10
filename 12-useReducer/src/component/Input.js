@@ -27,7 +27,8 @@ export default function Input() {
     const event   = (which) => e => dispatch({ type:"event", which });
     return (
         <div>
-            <FormControl value={state}
+            <FormControl
+                value={state}
                 onChange={change}
                 onKeyDown={keydown}
                 onFocus={event('focus')}
