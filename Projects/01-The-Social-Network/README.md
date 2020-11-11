@@ -34,13 +34,15 @@ Anton
 
 Endpoint: https://fbw14social.hktr.de/{URI}
 
-### Register
+### Authentication (mandatory)
+
+#### Register
   - Method: POST
   - URI: /auth/register
   - Params: { email, password }
   - Result: { status:'ok'|'fail' }
 
-### Login
+#### Login
   - Method: POST
   - URI: /auth/login
   - Params: { email, password }
@@ -50,36 +52,39 @@ Endpoint: https://fbw14social.hktr.de/{URI}
         profile:Profile
     }
 
-### Logout
+#### Logout
   - Method: POST
   - URI: /auth/logout
   - Params: {}
   - Result: { status:'ok' }
 
-### Unregister
+#### Unregister
   - Method: POST
   - URI: /auth/register
   - Params: { email, password }
   - Result: { status:'ok'|'fail' }
 
+### Profiles (mandatory)
 
-### Profile
+#### Profile
   - Method: GET
   - URI: /profile
   - Result: { status:'ok'|'fail', profile:Profile }
 
-### EditProfile
+#### EditProfile
   - Method: PUT
   - URI: /profile
   - Params: {...} Altered fields
   - Result: { status:'ok'|'fail', profile:Profile }
 
-### ViewProfile (another user)
+#### ViewProfile (another user)
   - Method: GET
   - URI: /profile/:userId
   - Result: { status:'ok'|'fail', profile:Profile }
 
-### SearchUser
+### Search (mandatory)
+
+#### SearchUser
 
 Search a user by Name, Location, Age, etc.
 
@@ -88,44 +93,75 @@ Search a user by Name, Location, Age, etc.
   - Params: {...} search fields
   - Result: { status:'ok'|'fail', profiles:[Profile] }
 
-### ListFriends
+### Friendships (mandatory)
+
+#### ListFriends
   - Method: GET
   - URI: /friends
   - Result: { status:'ok'|'fail', profiles:[Profile] }
 
-### ListFriendRequests
+#### ListFriendRequests
   - Method: GET
   - URI: /friends/pending
   - Result: { status:'ok'|'fail', profiles:[Profile] }
 
-### AddFriend
+#### AddFriend
   - Method: POST
   - URI: /friends/approve
   - Params: {userId}
   - Result: { status:'ok'|'fail' }
 
-### UnFriend
+#### UnFriend
   - Method: POST
   - URI: /friends/reject
   - Params: {userId}
   - Result: { status:'ok'|'fail' }
 
-### SendMessage
+### Communication (mandatory)
+
+#### SendMessage
   - Method: POST
   - URI: /message
   - Params: {userId,message}
   - Result: { status:'ok'|'fail', history:[Message] }
 
-### ChatHistory
+#### ChatHistory
   - Method: GET
   - URI: /message/history/:userId
   - Result: { status:'ok'|'fail', history:[Message] }
 
-AddPost
-EditPost
-DeletePost
-LikePost
-HatePost
+### Profile / Group Posts (optional)
+
+#### AddPost
+  - Method: POST
+  - URI: /post
+  - Params: { userId|groupId, message }
+  - Result: { status:'ok'|'fail', post:Post }
+
+#### EditPost
+  - Method: POST
+  - URI: /post/edit
+  - Params: { postId, message }
+  - Result: { status:'ok'|'fail', post:Post }
+
+#### DeletePost
+  - Method: POST
+  - URI: /post/delete
+  - Params: { postId }
+  - Result: { status:'ok'|'fail' }
+
+#### PostReact
+  - Method: POST
+  - URI: /post/like
+  - Params: { postId, reaction }
+  - Result: { status:'ok'|'fail' }
+
+#### CommentPost
+CommentPostEdit
+CommentPostDelete
+CommentPostReact
+
+### Groups (optional)
 
 CreateGroup
 DeleteGroup
