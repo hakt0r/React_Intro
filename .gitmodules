@@ -28,3 +28,9 @@
 [submodule "14-Redux-Organized"]
 	path = 14-Redux-Organized
 	url = https://github.com/hakt0r/Calc14.git
+[submodule "Exercises/X1-Clones"]
+	path = Exercises/X1-Clones
+	url = https://github.com/hakt0r/Exercise-JS-X1.git
+[submodule "Exercises/X2-Twisted-Clones"]
+	path = Exercises/X2-Twisted-Clones
+	url = https://github.com/hakt0r/Exercise-JS-x2.git
