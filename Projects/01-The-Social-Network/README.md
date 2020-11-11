@@ -29,3 +29,39 @@ Sami
 
 ## Undecided
 Anton
+
+## Backend Functions
+Register
+Login
+Logout
+Unregister
+
+Profile
+EditProfile
+ViewProfile
+
+SearchUser
+- Name
+- Location
+- Age
+
+ListFriends
+ListFriendRequests
+AddFriend
+UnFriend
+
+SendMessage
+ChatHistory
+
+AddPost
+EditPost
+DeletePost
+LikePost
+HatePost
+
+CreateGroup
+DeleteGroup
+JoinGroup
+InviteGroup
+GroupPost
+GroupView
