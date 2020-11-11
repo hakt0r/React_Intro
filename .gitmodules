@@ -13,6 +13,18 @@
 [submodule "Exercises/04-Deep-State"]
 	path = Exercises/04-Deep-State
 	url = https://github.com/hakt0r/React-Ex04
+[submodule "Exercises/05-useRef-useEffect"]
+	path = Exercises/05-useRef-useEffect
+	url = https://github.com/hakt0r/React-Ex05
+[submodule "Exercises/06-Router"]
+	path = Exercises/06-Router
+	url = https://github.com/hakt0r/React-Ex06
+[submodule "Exercises/07-useReducer"]
+	path = Exercises/07-useReducer
+	url = https://github.com/hakt0r/React-Ex07
+[submodule "Exercises/08-Tic-Tac-Toe"]
+	path = Exercises/08-Tic-Tac-Toe
+	url = https://github.com/hakt0r/React-Ex08
 [submodule "09-Todis-Refactor"]
 	path = 09-Todis-Refactor
 	url = https://github.com/hakt0r/Todis-SinglePageApp
