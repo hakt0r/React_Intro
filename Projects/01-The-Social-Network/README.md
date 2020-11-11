@@ -14,7 +14,7 @@ README.md in your project)
 ## Group 1
 **Members:** Micha, Madhu
 
-## Group 2
+## Group 2 - Glued
 **Members:** Glen, Juanca
 [Trello](https://trello.com/b/0YPXf71t/social-media-react)
 [Git](https://github.com/glennludszuweit/social-media-REACT)
@@ -30,7 +30,8 @@ Anton
 
 ## Backend Functions
 
-Endpoint: https://fbw14social.hktr.de/{URI}
+  - Sources: [github](https://github.com/DCI-Dusseldorf/Fbw14-The-Social-Backend)
+  - Endpoint: https://fbw14social.hktr.de/{URI}
 
 ### Authentication (mandatory)
 
