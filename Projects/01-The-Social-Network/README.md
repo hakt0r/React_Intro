@@ -12,20 +12,18 @@ Document your progress (at least) in Kanban Form (Trello or
 README.md in your project)
 
 ## Group 1
-Micha
-Madhu
+**Members:** Micha, Madhu
 
 ## Group 2
-Glen
-Juanca
+**Members:** Glen, Juanca
+[Trello](https://trello.com/b/0YPXf71t/social-media-react)
+[Git](https://github.com/glennludszuweit/social-media-REACT)
 
 ## Group 3
-Danylo
-Daniel
+**Members:** Danylo, Daniel
 
 ## Group 4
-Nisha
-Sami
+**Members:** Nisha, Sami
 
 ## Undecided
 Anton
