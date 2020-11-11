@@ -24,6 +24,8 @@ README.md in your project)
 
 ## Group 4
 **Members:** Nisha, Sami
+[Trello](https://trello.com/b/VHWA0xcj/react-social-media)
+[Git]()
 
 ## Undecided
 Anton
