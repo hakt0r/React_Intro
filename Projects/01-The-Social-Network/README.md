@@ -157,15 +157,62 @@ Search a user by Name, Location, Age, etc.
   - Result: { status:'ok'|'fail' }
 
 #### CommentPost
-CommentPostEdit
-CommentPostDelete
-CommentPostReact
+  - Method: POST
+  - URI: /post/comment
+  - Params: { postId, message }
+  - Result: { status:'ok'|'fail', post:Post }
+
+#### CommentPostEdit
+  - Method: POST
+  - URI: /post/comment/edit
+  - Params: { messageId }
+  - Result: { status:'ok'|'fail', post:Post }
+
+#### CommentPostDelete
+  - Method: POST
+  - URI: /post/comment/delete
+  - Params: { messageId }
+  - Result: { status:'ok'|'fail', post:Post }
+
+#### CommentPostReact
+  - Method: POST
+  - URI: /post/comment/react
+  - Params: { messageId, reaction:String }
+  - Result: { status:'ok'|'fail', post:Post }
 
 ### Groups (optional)
 
-CreateGroup
-DeleteGroup
-JoinGroup
-InviteGroup
-GroupPost
-GroupView
+#### CreateGroup
+  - Method: POST
+  - URI: /group
+  - Params: Group
+  - Result: { status:'ok'|'fail', group:Group }
+
+#### DeleteGroup
+  - Method: POST
+  - URI: /group/delete
+  - Params: { groupId }
+  - Result: { status:'ok'|'fail' }
+
+#### JoinGroup
+  - Method: POST
+  - URI: /group/join
+  - Params: { groupId }
+  - Result: { status:'ok'|'fail' }
+
+#### InviteGroup
+  - Method: POST
+  - URI: /group/invite
+  - Params: { userId, groupId }
+  - Result: { status:'ok'|'fail' }
+
+#### GroupPost
+  - Method: POST
+  - URI: /group/post
+  - Params: { groupId, message:Message }
+  - Result: { status:'ok'|'fail' }
+
+#### GroupView
+  - Method: GET
+  - URI: /group/:groupId
+  - Result: { status:'ok'|'fail', group:Group }
