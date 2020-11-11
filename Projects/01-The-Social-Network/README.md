@@ -31,27 +31,95 @@ Sami
 Anton
 
 ## Backend Functions
-Register
-Login
-Logout
-Unregister
 
-Profile
-EditProfile
-ViewProfile
+Endpoint: https://fbw14social.hktr.de/{URI}
 
-SearchUser
-- Name
-- Location
-- Age
+### Register
+  - Method: POST
+  - URI: /auth/register
+  - Params: { email, password }
+  - Result: { status:'ok'|'fail' }
 
-ListFriends
-ListFriendRequests
-AddFriend
-UnFriend
+### Login
+  - Method: POST
+  - URI: /auth/login
+  - Params: { email, password }
+  - Result: {
+        status:'ok'|'fail',
+        token:'123123asd12',
+        profile:Profile
+    }
 
-SendMessage
-ChatHistory
+### Logout
+  - Method: POST
+  - URI: /auth/logout
+  - Params: {}
+  - Result: { status:'ok' }
+
+### Unregister
+  - Method: POST
+  - URI: /auth/register
+  - Params: { email, password }
+  - Result: { status:'ok'|'fail' }
+
+
+### Profile
+  - Method: GET
+  - URI: /profile
+  - Result: { status:'ok'|'fail', profile:Profile }
+
+### EditProfile
+  - Method: PUT
+  - URI: /profile
+  - Params: {...} Altered fields
+  - Result: { status:'ok'|'fail', profile:Profile }
+
+### ViewProfile (another user)
+  - Method: GET
+  - URI: /profile/:userId
+  - Result: { status:'ok'|'fail', profile:Profile }
+
+### SearchUser
+
+Search a user by Name, Location, Age, etc.
+
+  - Method: POST
+  - URI: /search/user
+  - Params: {...} search fields
+  - Result: { status:'ok'|'fail', profiles:[Profile] }
+
+### ListFriends
+  - Method: GET
+  - URI: /friends
+  - Result: { status:'ok'|'fail', profiles:[Profile] }
+
+### ListFriendRequests
+  - Method: GET
+  - URI: /friends/pending
+  - Result: { status:'ok'|'fail', profiles:[Profile] }
+
+### AddFriend
+  - Method: POST
+  - URI: /friends/approve
+  - Params: {userId}
+  - Result: { status:'ok'|'fail' }
+
+### UnFriend
+  - Method: POST
+  - URI: /friends/reject
+  - Params: {userId}
+  - Result: { status:'ok'|'fail' }
+
+### SendMessage
+  - Method: POST
+  - URI: /message
+  - Params: {userId,message}
+  - Result: { status:'ok'|'fail', history:[Message] }
+
+### ChatHistory
+  - Method: GET
+  - URI: /message/history/:userId
+  - Result: { status:'ok'|'fail', history:[Message] }
 
 AddPost
 EditPost
