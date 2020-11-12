@@ -11,8 +11,10 @@ switch the role daily.
 Document your progress (at least) in Kanban Form (Trello or
 README.md in your project)
 
-## Group 1
+## Group 1 - Chitter-Chatter
 **Members:** Micha, Madhu
+[Trello](https://trello.com/b/aAmDz3Wg/chitter-chatter-app)
+[Git](https://github.com/DCI-Dusseldorf/chitter-chatter)
 
 ## Group 2 - Glued
 **Members:** Glen, Juanca
