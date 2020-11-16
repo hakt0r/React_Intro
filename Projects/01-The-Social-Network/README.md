@@ -13,21 +13,30 @@ README.md in your project)
 
 ## Group 1 - Chitter-Chatter
 **Members:** Micha, Madhu
+**Slug:** chitter
 [Trello](https://trello.com/b/aAmDz3Wg/chitter-chatter-app)
 [Git](https://github.com/DCI-Dusseldorf/chitter-chatter)
+[Frontend](https://sz.hktr.de/chitter/)
 
 ## Group 2 - Glued
+**Slug:** glued
 **Members:** Glen, Juanca
 [Trello](https://trello.com/b/0YPXf71t/social-media-react)
 [Git](https://github.com/glennludszuweit/social-media-REACT)
+[Frontend](https://sz.hktr.de/glued/)
 
 ## Group 3
 **Members:** Danylo, Daniel
+**Slug:** doubled
+[Trello](https://trello.com/b/G8Jo5AUy)
+[Frontend](https://sz.hktr.de/doubled/)
 
 ## Group 4
 **Members:** Nisha, Sami
+**Slug:** nisa
 [Trello](https://trello.com/b/VHWA0xcj/react-social-media)
-[Git]()
+[Git](https://github.com/DCI-Dusseldorf/NiSa-React-SocialMedia)
+[Frontend](https://sz.hktr.de/nisa/)
 
 ## Undecided
 Anton
@@ -35,14 +44,14 @@ Anton
 ## Backend Functions
 
   - Sources: [github](https://github.com/DCI-Dusseldorf/Fbw14-The-Social-Backend)
-  - Endpoint: https://fbw14social.hktr.de/{URI}
+  - Endpoint: https://sz.hktr.de/api/{URI}
 
 ### Authentication (mandatory)
 
 #### Register
   - Method: POST
   - URI: /auth/register
-  - Params: { email, password }
+  - Params: { email, password, name }
   - Result: { status:'ok'|'fail' }
 
 #### Login
