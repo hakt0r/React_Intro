@@ -46,6 +46,42 @@ Anton
   - Sources: [github](https://github.com/DCI-Dusseldorf/Fbw14-The-Social-Backend)
   - Endpoint: https://sz.hktr.de/api/{URI}
 
+#### Using the Backend on localhost:3000
+
+Inside your package.json add:
+
+```JSON
+{
+  "proxy": "https://sz.hktr.de"
+}
+```
+
+#### Using the Backend and deploy
+
+Inside your package.json add:
+
+```JSON
+{
+  ...
+  "homepage": "https://sz.hktr.de/{GROUP}",
+  "scripts":{
+    "predeploy": "npm run build",
+    "deploy": "cd build && scp -r * {GROUP}@sz.hktr.de:"
+  }
+}
+```
+
+Inside index.js (or wherever you call BrowserRouter) add the basname prop
+to the BrowserRouter component, eg.:
+
+```JSX
+<BrowserRouter basename="/{GROUP}">
+  <App/>
+</BrowserRouter>
+```
+
+Replace {GROUP} with your corresponding group name (nisa|doubled|chitter|glued).
+
 ### Authentication (mandatory)
 
 #### Register
