@@ -52,7 +52,9 @@ Inside your package.json add:
 
 ```JSON
 {
-  "proxy": "https://sz.hktr.de"
+  ...
+  "proxy": "https://sz.hktr.de",
+  ...
 }
 ```
 
@@ -66,8 +68,10 @@ Inside your package.json add:
   "homepage": "https://sz.hktr.de/{GROUP}",
   "scripts":{
     "predeploy": "npm run build",
-    "deploy": "cd build && scp -r * {GROUP}@sz.hktr.de:"
-  }
+    "deploy": "cd build && scp -r * {GROUP}@sz.hktr.de:",
+    ...
+  },
+  ...
 }
 ```
 
