@@ -84,7 +84,7 @@ to the BrowserRouter component, eg.:
 </BrowserRouter>
 ```
 
-Replace {GROUP} with your corresponding group name (nisa|doubled|chitter|glued).
+Replace **{GROUP}** with your corresponding group name (nisa|doubled|chitter|glued).
 
 ### Authentication (mandatory)
 
