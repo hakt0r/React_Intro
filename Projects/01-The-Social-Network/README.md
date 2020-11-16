@@ -25,13 +25,13 @@ README.md in your project)
 [Git](https://github.com/glennludszuweit/social-media-REACT)
 [Frontend](https://sz.hktr.de/glued/)
 
-## Group 3
+## Group 3 - DoubleD
 **Members:** Danylo, Daniel
 **Slug:** doubled
 [Trello](https://trello.com/b/G8Jo5AUy)
 [Frontend](https://sz.hktr.de/doubled/)
 
-## Group 4
+## Group 4 - NiSa
 **Members:** Nisha, Sami
 **Slug:** nisa
 [Trello](https://trello.com/b/VHWA0xcj/react-social-media)
