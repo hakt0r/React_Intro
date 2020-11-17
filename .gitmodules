@@ -46,3 +46,6 @@
 [submodule "Exercises/X2-Twisted-Clones"]
 	path = Exercises/X2-Twisted-Clones
 	url = https://github.com/hakt0r/Exercise-JS-x2.git
+[submodule "Projects/01-The-Social-Network/frontend"]
+	path = Projects/01-The-Social-Network/frontend
+	url = https://github.com/hakt0r/tsn-frontend.git
