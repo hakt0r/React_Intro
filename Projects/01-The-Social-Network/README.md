@@ -92,29 +92,25 @@ Replace **{GROUP}** with your corresponding group name (nisa|doubled|chitter|glu
   - Method: POST
   - URI: /auth/register
   - Params: { email, password, name }
-  - Result: { status:'ok'|'fail' }
+  - Result: { tokens:{ access, refresh }, user:User }
 
 #### Login
   - Method: POST
   - URI: /auth/login
   - Params: { email, password }
-  - Result: {
-        status:'ok'|'fail',
-        token:'123123asd12',
-        profile:Profile
-    }
+  - Result: { tokens:{ access, refresh }, user:User }
 
 #### Logout
   - Method: POST
   - URI: /auth/logout
-  - Params: {}
-  - Result: { status:'ok' }
+  - Params: { refresh }
+  - Result: 204
 
 #### Unregister
   - Method: POST
   - URI: /auth/register
   - Params: { email, password }
-  - Result: { status:'ok'|'fail' }
+  - Result: 204
 
 ### Profiles (mandatory)
 
@@ -139,11 +135,12 @@ Replace **{GROUP}** with your corresponding group name (nisa|doubled|chitter|glu
 #### SearchUser
 
 Search a user by Name, Location, Age, etc.
+Model can be User, Post, Group...
 
   - Method: POST
-  - URI: /search/user
-  - Params: {...} search fields
-  - Result: { status:'ok'|'fail', profiles:[Profile] }
+  - URI: /search/
+  - Params: { type:"Model", field:String, value:Dynamic|match:String }
+  - Result: [ Model ]
 
 ### Friendships (mandatory)
 
@@ -186,85 +183,70 @@ Search a user by Name, Location, Age, etc.
 
 #### AddPost
   - Method: POST
-  - URI: /post
-  - Params: { userId|groupId, message }
-  - Result: { status:'ok'|'fail', post:Post }
+  - URI: /post/
+  - Params: { message }
+  - Result: { post:Post }
+
+#### Comment (Sub-Post)
+  - Method: POST
+  - URI: /post/:postId
+  - Params: { message }
+  - Result: { post:Post }
 
 #### EditPost
-  - Method: POST
-  - URI: /post/edit
-  - Params: { postId, message }
-  - Result: { status:'ok'|'fail', post:Post }
+  - Method: PATCH
+  - URI: /post/:postId
+  - Params: { message }
+  - Result: { post:Post }
 
 #### DeletePost
-  - Method: POST
-  - URI: /post/delete
-  - Params: { postId }
-  - Result: { status:'ok'|'fail' }
+  - Method: DELETE
+  - URI: /post/:postId
+  - Result: 204
 
-#### PostReact
-  - Method: POST
-  - URI: /post/like
-  - Params: { postId, reaction }
-  - Result: { status:'ok'|'fail' }
-
-#### CommentPost
-  - Method: POST
-  - URI: /post/comment
-  - Params: { postId, message }
-  - Result: { status:'ok'|'fail', post:Post }
-
-#### CommentPostEdit
-  - Method: POST
-  - URI: /post/comment/edit
-  - Params: { messageId }
-  - Result: { status:'ok'|'fail', post:Post }
-
-#### CommentPostDelete
-  - Method: POST
-  - URI: /post/comment/delete
-  - Params: { messageId }
-  - Result: { status:'ok'|'fail', post:Post }
-
-#### CommentPostReact
-  - Method: POST
-  - URI: /post/comment/react
-  - Params: { messageId, reaction:String }
-  - Result: { status:'ok'|'fail', post:Post }
+#### Add Reaction
+  - Method: PUT
+  - URI: /like/:model/:id/:reaction
+  - Result: 204
 
 ### Groups (optional)
 
 #### CreateGroup
   - Method: POST
-  - URI: /group
+  - URI: /group/
   - Params: Group
-  - Result: { status:'ok'|'fail', group:Group }
+  - Result: { group:Group }
 
 #### DeleteGroup
-  - Method: POST
-  - URI: /group/delete
-  - Params: { groupId }
-  - Result: { status:'ok'|'fail' }
+  - Method: DELETE
+  - URI: /group/:groupId
+  - Result: 204
 
 #### JoinGroup
   - Method: POST
-  - URI: /group/join
-  - Params: { groupId }
-  - Result: { status:'ok'|'fail' }
+  - URI: /group/:groupId/join
+  - Params: {}
+  - Result: 204
 
 #### InviteGroup
   - Method: POST
-  - URI: /group/invite
-  - Params: { userId, groupId }
-  - Result: { status:'ok'|'fail' }
+  - URI: /group/:groupId/invite
+  - Params: { userId }
+  - Result: 204
 
 #### GroupPost
   - Method: POST
-  - URI: /group/post
+  - URI: /group/:groupId/post
   - Params: { groupId, message:Message }
   - Result: { status:'ok'|'fail' }
 
 #### GroupView
   - Method: GET
   - URI: /group/:groupId
-  - Result: { status:'ok'|'fail', group:Group }
+  - Result: Group
+
+#### Group Post (Sub-Post)
+  - Method: POST
+  - URI: /post/:postId
+  - Params: { message }
+  - Result: { post:Post }
