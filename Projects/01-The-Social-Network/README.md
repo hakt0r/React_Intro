@@ -107,9 +107,8 @@ Replace **{GROUP}** with your corresponding group name (nisa|doubled|chitter|glu
   - Result: 204
 
 #### Unregister
-  - Method: POST
-  - URI: /auth/register
-  - Params: { email, password }
+  - Method: DELETE
+  - URI: /user/:userId
   - Result: 204
 
 ### Profiles (mandatory)
