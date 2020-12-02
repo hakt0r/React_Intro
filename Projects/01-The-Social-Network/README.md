@@ -217,6 +217,11 @@ Model can be User, Post, Group...
   - URI: /like/:model/:id/:reaction (reaction := 'Like','Hate','Frown','Angry','LOL','ROFL','Love')
   - Result: 204
 
+#### Remove Reaction
+  - Method: DELETE
+  - URI: /like/:model/:id/:reaction (reaction := 'Like','Hate','Frown','Angry','LOL','ROFL','Love')
+  - Result: 204
+
 ### Groups (optional)
 
 #### CreateGroup
