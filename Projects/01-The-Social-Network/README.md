@@ -115,12 +115,12 @@ Replace **{GROUP}** with your corresponding group name (nisa|doubled|chitter|glu
 
 #### Profile
   - Method: GET
-  - URI: /user/
+  - URI: /user/:userId? (for other users provide userId)
   - Result: { User }
 
 #### EditProfile
   - Method: PATCH
-  - URI: /user/
+  - URI: /user/:userId? (changing another user, you need to be admin)
   - Params: {...} Altered fields
   - Result: { User }
 
