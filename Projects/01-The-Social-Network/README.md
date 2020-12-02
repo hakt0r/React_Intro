@@ -113,6 +113,15 @@ Replace **{GROUP}** with your corresponding group name (nisa|doubled|chitter|glu
 
 ### Profiles (mandatory)
 
+User = {
+  name:    String
+  email:   String
+  friends: [User]
+  friendRequests: [User]
+  friendRequestsSent: [User]
+  avatar:  String
+}
+
 #### Profile
   - Method: GET
   - URI: /user/:userId? (for other users provide userId)
