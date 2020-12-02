@@ -115,19 +115,19 @@ Replace **{GROUP}** with your corresponding group name (nisa|doubled|chitter|glu
 
 #### Profile
   - Method: GET
-  - URI: /profile
-  - Result: { status:'ok'|'fail', profile:Profile }
+  - URI: /user/
+  - Result: { User }
 
 #### EditProfile
-  - Method: PUT
-  - URI: /profile
+  - Method: PATCH
+  - URI: /user/
   - Params: {...} Altered fields
-  - Result: { status:'ok'|'fail', profile:Profile }
+  - Result: { User }
 
 #### ViewProfile (another user)
   - Method: GET
-  - URI: /profile/:userId
-  - Result: { status:'ok'|'fail', profile:Profile }
+  - URI: /user/:userId
+  - Result: { User }
 
 ### Search (mandatory)
 
