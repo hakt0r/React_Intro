@@ -214,7 +214,7 @@ Model can be User, Post, Group...
 
 #### Add Reaction
   - Method: PUT
-  - URI: /like/:model/:id/:reaction
+  - URI: /like/:model/:id/:reaction (reaction := like, hate)
   - Result: 204
 
 ### Groups (optional)
