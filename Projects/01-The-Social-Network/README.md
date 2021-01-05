@@ -127,6 +127,16 @@ User = {
   - URI: /user/:userId? (for other users provide userId)
   - Result: { User }
 
+#### Profile Posts
+  - Method: GET
+  - URI: /user/:userId/posts
+  - Result: [ Post ]
+
+#### User Posts Only
+  - Method: GET
+  - URI: /post/from/:userId
+  - Result: [ Post ]
+
 #### EditProfile
   - Method: PATCH
   - URI: /user/:userId? (changing another user, you need to be admin)
